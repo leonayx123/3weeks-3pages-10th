@@ -1,0 +1,49 @@
+body {
+  position: relative;
+  font-family: 微软雅黑,Arial;
+}
+h1, h2, h3, h4, h5, h6 { font-weight: normal;}
+button { display: block;}
+*:focus {outline: none; margin: 0}
+a { cursor: pointer;
+  text-decoration: none;
+}
+/********** HTML5 display-role reset for older browsers **********/
+article, aside, details, figcaption, figure, footer, header, menu, nav, section { display: block;}
+ol, ul{ list-style: none; margin: 0 ;padding: 0 }
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: '';content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+
+i,em{font-style: normal;}
+a{ text-decoration: none;}
+
+
+/********* 默认变量 **********/
+@default_color: #dc4b43;    //默认颜色
+@default_hover: #49a7d2;
+@font_color:#262d3d;    //字体颜色
+
+/********* 清除浮动 **********/
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}
+
+@transition_time:(0.5s);
+.transition-all(@transition_time) {
+  transition: all @transition_time;
+  -moz-transition: all @transition_time;
+  -webkit-transition: all @transition_time;
+  -o-transition: all @transition_time;
+}
+
+.transition-color (@size:0.1s) {
+  transition: color @size;
+  -moz-transition: color @size;
+  -webkit-transition: color @size;
+  -o-transition: color @size;
+}
